@@ -10,6 +10,9 @@ function background(){
      * alterar o background do body para a cor #BECCC3.
      */
 
+    let corpo = document.getElementsByTagName("body")
+    corpo[0].style.backgroundColor = "#BECCC3"
+    //document.body.style.backgroundColor = "#BECCC3"
 }
 
 /**
@@ -25,6 +28,18 @@ function show(){
       * Recupera os valores dos campos de texto cujo o id='fname' e id='lname' e apresente o nome
       * e o sobrenome de uma pessoa (separado por um espaço) na div id='result'
       */
+    let mostra = document.getElementById("result")
+    
+    let nome = document.getElementById("fname").value //.value pega a caixa value
+    let sobrenome = document.getElementById("lname").value
+
+    let fullname = `${nome} ${sobrenome}`
+    let parag = document.createElement("p")
+    
+    parag.innerText = fullname;
+
+    mostra.appendChild(parag)
+
 }
 
 /**
