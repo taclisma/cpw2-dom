@@ -66,8 +66,31 @@ function search(){
      *
      * Além disso, a função removeAllChildren abaixo também pode ser útil para o desenvolvimento da solução
      */
-
+    let result = document.getElementById("search");
+    removeAllChildren(result)
     
+    let input = document.getElementById("name").value;
+    
+    for(let j = 0; j < data.length;j++){
+        //for(let i = 0; i < input.length; i++){
+            
+            //console.log(data[j].name.substr(0, input.length).toUpperCase());
+            //console.log(input)
+            
+            
+            if(input.length == 0){
+                removeAllChildren(result)
+            } else if (input.toUpperCase() == data[j].name.substr(0, input.length).toUpperCase()){
+                let x = document.createElement("p")
+                x.innerHTML = `${data[j].name} \n`
+                result.appendChild(x)
+            }
+
+
+        //}
+    }
+
+
 
 }
 
