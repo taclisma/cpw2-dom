@@ -67,6 +67,8 @@ function search(){
      * Além disso, a função removeAllChildren abaixo também pode ser útil para o desenvolvimento da solução
      */
 
+    
+
 }
 
 /**
